@@ -1,3 +1,121 @@
 *{
     box-sizing: border-box;
+    transition: 300ms;
+}
+body{
+    font-family: 'Segoe UI','Roboto';
+}
+
+label{
+    font-weight: 600;
+}
+
+input[type=text],input[type=number],input[type=password]{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #193c50;
+    width: 80%;
+    font-size: 20px;
+}
+
+input[type=text]:focus,input[type=number]:focus,input[type=password]:focus{
+    border-bottom: 2px solid #ffe100;
+}
+
+select{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #193c50;
+    font-size: 16px;
+}
+select.date{ width: 60px; }
+select.month{ width: 80px; }
+select.year{ width: 65px; }
+
+.check{
+    display: block;
+    position: relative;
+    user-select: none;
+}
+
+.check input{
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+}
+
+.checkmark{
+    color: transparent;
+    z-index: 0;
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #193c50;
+}
+
+.check input:checked ~ .checkmark{
+    background: #193c50;
+    color: #ffe100;
+    font-weight: bold;
+    border: 2px solid #ffe100;
+}
+
+.radiomark{
+    color: transparent;
+    z-index: 0;
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 90px;
+    border: 2px solid #193c50;
+}
+
+.check input:checked ~ .radiomark{
+    background: #193c50;
+    color: #ffe100;
+    font-weight: bold;
+    border: 2px solid #ffe100;
+}
+
+.switch{
+    width: 50px;
+    height: 25px;
+    background: #eee;
+    border: 2px solid #193c50;
+}
+
+.switch input{
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 48px;
+}
+
+.toggle{
+    position: absolute;
+    background: #ffe100;
+    z-index: 0;
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    margin-top: 1px;
+    margin-left: 1px;
+}
+
+.switch input:checked ~ .toggle{
+    background: #193c50;
+    transform: translateX(22px);
+}
+
+input:checked + .switch{
+    background: #ffe100;
+    border: 2px solid #193c50;
 }
