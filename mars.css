@@ -2,6 +2,34 @@
     box-sizing: border-box;
     transition: 300ms;
 }
+
+.row{
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+}
+
+.col{display: inline-block;}
+
+@media only screen and (max-width: 450px) {
+    .large1,.large2,.large3,.large4,.large5.,large6,.large7.,large8,.large9,.large10,.large11,.large12{width: 100%;}
+}
+
+@media only screen and (min-width: 700px) {
+.large1{width: 8.33333%; }
+.large2{width: 16.66667%; }
+.large3{width: 24%; }
+.large4{width: 33.33333%; }
+.large5{width: 41.66667%; }
+.large6{width: 48%; }
+.large7{width: 58.33333%; }
+.large8{width: 66.66667%; }
+.large9{width: 73%; }
+.large10{width: 83.33333%; }
+.large11{width: 91.66667%; }
+.large12{width: 96%; }
+}
+
 body{
     font-family: 'Segoe UI','Roboto';
 }
