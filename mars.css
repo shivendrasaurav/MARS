@@ -10,6 +10,13 @@ body{ background: #fdfde8; }
 .secondary{ background: #26a69a; color: #ffe100; }
 .alert{ background: #de1738; color: #fff; }
 .success{ background: #008000; color: #FFF; }
+.fullscreen{
+    width: 101%;
+    height: 101%;
+    top: 0;
+    right: 0;
+    margin: 0.5%;
+}
 
 .right{float: right;}
 .left{float: left;}
@@ -23,7 +30,7 @@ body{ background: #fdfde8; }
 .col{display: inline-block;}
 
 @media (max-width: 500px) {
-    .large1,.large2,.large3,.large4,.large5.,large6,.large7.,large8,.large9,.large10,.large11,.large12{width: 100%; }
+    .large1,.large2,.large3,.large4,.large5,.large6,.large7,.large8,.large9,.large10,.large11,.large12{width: 100%; }
 }
 
 @media (min-width: 501px) and (max-width: 1000px) {
@@ -211,8 +218,11 @@ button.primary.tab:focus{
         z-index: 9;
         margin-left: -1%;
         width: 100.38%;
-        background: #26a69a;
+        background: transparent;
+        height: 60px;
+        padding-top: 5px;
     }
+    .tab.menu{color: #FFF;}
     .sidenav{display: none;}
 }
 @media (max-width: 700px) {

@@ -10,9 +10,39 @@
         function hidesidenav(){
             document.getElementById("nav1").style.display=("none");
         }
+        function colormenu(){
+            document.getElementById("tm").style.background=("#193c50");
+            document.getElementById("tm").style.color=("#FFF");
+        }
+        function decolormenu(){
+            document.getElementById("tm").style.background=("transparent");
+            document.getElementById("tm").style.color=("#FFF");
+        }
     </script>
 </head>
 <body onload="hidesidenav()">
+    <div class="topnav" id="tm">
+        <button class="tab menu left">MARS</button>
+        <button class="tab menu right">Item 1</button>
+        <button class="tab menu right">Item 2</button>
+        <button class="tab menu right">Item 3</button>
+        <button class="tab menu right">Item 4</button>
+        <button class="tab menu right">Item 5</button>
+    </div>
+    <div class="sidenav">
+        <div class="row"><span class="left">&nbsp;&nbsp;</span><button class="mico primary left" onclick="showsidenav();">=</button>        
+        <button class="mico right">MARS</button>
+        </div>
+        <div id="nav1" class="row">
+            <button class="mico right" onclick="hidesidenav();">X</button>
+            <div class="mtab">Item 1</div>
+            <div class="mtab">Item 2</div>
+            <div class="mtab">Item 3</div>
+            <div class="mtab">Item 4</div>
+            <div class="mtab">Item 5</div>
+        </div>
+    </div>
+    <img onmouseout="colormenu()" onmouseover="decolormenu()" src="4k-wallpaper-blur-close-up-1629998.jpg" style="top:0; left: 0; width: 101%; height:101%; margin: -0.5%"/>
     <h1>Input Controls : </h1>
     <input type="text" /><br>
     <label>Text </label><br>
@@ -89,27 +119,6 @@
         <div class="col large3 medium4"><p><button class="large secondary">Large</button></p></div>
         <div class="col large3 medium4"><p><button class="small circular alert">Small Circular</button></p></div>
         <div class="col large3 medium4"><p><button class="large circular success">Large Circular</button></p></div>
-    </div>
-    <div class="topnav">
-        <button class="tab primary left">MARS</button>
-        <button class="tab primary right">Item 1</button>
-        <button class="tab primary right">Item 2</button>
-        <button class="tab primary right">Item 3</button>
-        <button class="tab primary right active">Item 4</button>
-        <button class="tab primary right">Item 5</button>
-    </div>
-    <div class="sidenav">
-        <div class="row"><span class="left">&nbsp;&nbsp;</span><button class="mico primary left" onclick="showsidenav();">=</button>        
-        <button class="mico right">MARS</button>
-        </div>
-        <div id="nav1" class="row">
-            <button class="mico right" onclick="hidesidenav();">X</button>
-            <div class="mtab">Item 1</div>
-            <div class="mtab">Item 2</div>
-            <div class="mtab">Item 3</div>
-            <div class="mtab">Item 4</div>
-            <div class="mtab">Item 5</div>
-        </div>
     </div>
 </body>
 </html>
