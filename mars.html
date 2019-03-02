@@ -18,6 +18,13 @@
             document.getElementById("tm").style.background=("transparent");
             document.getElementById("tm").style.color=("#FFF");
         }
+        function openmodal(){
+            document.getElementsById("mod1").style.display=("block");
+        }
+        function closemodal(){
+            document.getElementsById("mod1").style.display=("none");
+        }
+        
     </script>
 </head>
 <body onload="hidesidenav()">
@@ -95,6 +102,9 @@
     <input type="checkbox"/>
     <span class="toggle"></span>
     </div><br>
+    <h1>Modal : </h1>
+    <div class="modalcontainer" id="mod1"><div class="modalcontent">ASD</div></div>
+    <button class="primary large" onclick="openmodal();">Click To Open Modal</button>
     <h1>The Grid : </h1>
     <div class="row">
     <div class="col large3 medium6"><p>Lorem Ipsum Orem Dum Bum</p></div>
