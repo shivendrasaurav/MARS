@@ -17,6 +17,14 @@ body{ background: #fdfde8; }
     margin: -0.5%;
 }
 
+
+.mview{display:none;}
+.dview{display:block;}
+@media (max-width: 700px){
+    .dview{display:none;}
+    .mview{display:block;}
+}
+
 .right{float: right;}
 .left{float: left;}
 .row{
