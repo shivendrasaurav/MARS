@@ -75,9 +75,11 @@ input[type=text],input[type=number],input[type=password]{
     border-bottom: 2px solid #193c50;
     width: 80%;
     font-size: 20px;
+    background: transparent;
 }
 
 input[type=text]:focus,input[type=number]:focus,input[type=password]:focus{
+    background: transparent;
     border-bottom: 2px solid #ffe100;
 }
 
@@ -87,6 +89,7 @@ select{
     border-right: none;
     border-bottom: 2px solid #193c50;
     font-size: 16px;
+    background: transparent;
 }
 select.date{ width: 60px; }
 select.month{ width: 80px; }
@@ -187,6 +190,11 @@ button.secondary:focus{
     border: 2px dashed #000 ;
     color: #000 ;
     background: #ffe100 ;
+}
+button.alert:hover{
+  border: 2px solid red;
+  background: #FFF;
+  color: red;
 }
 
 .small{ min-width: 80px; height: 40px; font-size: 16px;}
@@ -349,12 +357,14 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
 }
 .modalcontainer{
     height: 100%;
-    width: 0%;
-    position: relative;
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 10;
     background: #000;
+    color: #FFF;
+    display: none;
 }
 .modal{
   position: absolute;
@@ -364,7 +374,8 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
   bottom: 0;
   background: #000;
   color: #FFF;
-  width: 0%;
-  height: inherit;
+  width: 80%;
+  height: 88%;
+  margin: auto;
   transition: 300ms;
 }

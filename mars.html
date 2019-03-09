@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <title>MARS</title>
     <link href="mars.css" rel="stylesheet" type="text/css">
     <script>
@@ -19,12 +20,11 @@
             document.getElementById("tm").style.color=("#FFF");
         }
         function openmodal(){
-            document.getElementsById("mod1").style.display=("block");
+            document.getElementById("mod1").style.display=("block");
         }
         function closemodal(){
-            document.getElementsById("mod1").style.display=("none");
+            document.getElementById("mod1").style.display=("none");
         }
-
     </script>
 </head>
 <body onload="hidesidenav()">
@@ -133,12 +133,14 @@
       <div class="overlay">
         <h2 style="text-align:center;">This Is An Overlay</h2>
       </div>
-    </div>
-    <button class="small primary modalkey">Click To Open Modal</button>
-    <div class="modalcontainer">
+    </div><br>
+    <button class="small primary" onclick="openmodal();">Click To Open Modal</button>
+    <div class="modalcontainer" id="mod1">
       <div class="modal">
-        <h1 style="text-align:center"></h1>
+        <h1 style="text-align:center">MODAL<button class="alert right small" onclick="closemodal();">X</button>
+      </h1>
       </div>
     </div>
+
 </body>
 </html>
