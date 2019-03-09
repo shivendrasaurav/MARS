@@ -309,8 +309,8 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
 }
 .person{
-    height: 50%;
-    width: 80%;
+    height: 300px;
+    width: 350px;
     display: block;
     margin: auto;
     padding: 4px;
@@ -324,17 +324,47 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
     background: red;
     color: #FFF;
 }
+.overlaycontainer:hover .overlay{
+    display: block;
+    opacity: 1;
+    transition: 300ms;
+}
+.overlaycontainer{
+  height:300px;
+  width: 350px;
+  position: relative;
+}
+.overlay{
+  opacity: 0;
+  position: absolute;
+  left:0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  background: #000;
+  color: #FFF;
+  width: inherit;
+  height: inherit;
+  transition: 300ms;
+}
 .modalcontainer{
     height: 100%;
-    width: 100%;
-    position: absolute;
+    width: 0%;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 5;
     background: #000;
 }
-.modalcontent{
-    width: 80%;
-    height: auto;
-    background: #FFF;
+.modal{
+  position: absolute;
+  left:0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  background: #000;
+  color: #FFF;
+  width: 0%;
+  height: inherit;
+  transition: 300ms;
 }

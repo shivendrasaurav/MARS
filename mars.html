@@ -24,7 +24,7 @@
         function closemodal(){
             document.getElementsById("mod1").style.display=("none");
         }
-        
+
     </script>
 </head>
 <body onload="hidesidenav()">
@@ -37,7 +37,7 @@
         <button class="tab menu right">Item 5</button>
     </div>
     <div class="sidenav">
-        <div class="row"><span class="left">&nbsp;&nbsp;</span><button class="mico primary left" onclick="showsidenav();">=</button>        
+        <div class="row"><span class="left">&nbsp;&nbsp;</span><button class="mico primary left" onclick="showsidenav();">=</button>
         <button class="mico right">MARS</button>
         </div>
         <div id="nav1" class="row">
@@ -102,9 +102,6 @@
     <input type="checkbox"/>
     <span class="toggle"></span>
     </div><br>
-    <h1>Modal : </h1>
-    <div class="modalcontainer" id="mod1"><div class="modalcontent">ASD</div></div>
-    <button class="primary large" onclick="openmodal();">Click To Open Modal</button>
     <h1>The Grid : </h1>
     <div class="row">
     <div class="col large3 medium6"><p>Lorem Ipsum Orem Dum Bum</p></div>
@@ -129,6 +126,19 @@
         <div class="col large3 medium4"><p><button class="large secondary">Large</button></p></div>
         <div class="col large3 medium4"><p><button class="small circular alert">Small Circular</button></p></div>
         <div class="col large3 medium4"><p><button class="large circular success">Large Circular</button></p></div>
+    </div>
+    <h1>Overlay and Modals</h1>
+    <div class="overlaycontainer">
+      <img class="person polaroid"/>
+      <div class="overlay">
+        <h2 style="text-align:center;">This Is An Overlay</h2>
+      </div>
+    </div>
+    <button class="small primary modalkey">Click To Open Modal</button>
+    <div class="modalcontainer">
+      <div class="modal">
+        <h1 style="text-align:center"></h1>
+      </div>
     </div>
 </body>
 </html>
