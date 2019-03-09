@@ -17,14 +17,6 @@ body{ background: #fdfde8; }
     margin: -0.5%;
 }
 
-
-.mview{display:none;}
-.dview{display:block;}
-@media (max-width: 700px){
-    .dview{display:none;}
-    .mview{display:block;}
-}
-
 .right{float: right;}
 .left{float: left;}
 .row{
@@ -340,7 +332,6 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
     left: 0;
     z-index: 5;
     background: #000;
-    display: none;
 }
 .modalcontent{
     width: 80%;
