@@ -282,10 +282,15 @@ button.primary.tab:focus{
     width: 50px;
     height: 50px;
     }
-    #nav1{display: none;}
+    #nav1{
+        display: none;
+        padding: 20px;
+        font-size: 28px;
+        padding-bottom: 100%;
+        text-align: center;
+    }
     .mtab{
         padding: 5px;
-        padding-left: 45px;
     }
 }
 
