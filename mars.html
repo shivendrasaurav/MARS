@@ -38,13 +38,20 @@
     </script>
 </head>
 <body onload="hidesidenav()">
-    <div class="topnav" id="tm">
-        <button class="tab menu left">MARS</button>
-        <button class="tab menu right">Item 1</button>
-        <button class="tab menu right">Item 2</button>
-        <button class="tab menu right">Item 3</button>
-        <button class="tab menu right">Item 4</button>
-        <button class="tab menu right">Item 5</button>
+    <div class="topnav inverted" id="tm">
+        <button class="primary tab menu left">MARS</button>
+        <div class="dropdown_container right">
+            <button class="dropdown tab primary">Dropdown</button>
+            <div class="dropdown_content">
+                <a href="#"><button class="dropdown">LOREM</button></a>
+                <a href="#"><button class="dropdown">LOREM</button></a>
+                <a href="#"><button class="dropdown">LOREM</button></a>
+            </div>
+          </div>
+        <button class="primary tab menu right">Item 2</button>
+        <button class="primary tab menu right">Item 3</button>
+        <button class="primary tab menu right">Item 4</button>
+        <button class="primary tab menu right">Item 5</button>
     </div>
     <div class="sidenav inverted">
         <div class="row">
@@ -151,6 +158,7 @@
       </h1>
       </div>
     </div>
+
 
 </body>
 </html>
