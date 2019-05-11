@@ -306,7 +306,7 @@ button.primary.tab:focus{
 }
 
 .center{
-    display: block;
+    display: inline-block;
     margin: auto;
 }
 .followicon{
