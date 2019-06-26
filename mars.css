@@ -8,7 +8,7 @@ body{ background: #fdfde8; }
 
 .inverted{background: #000; color: #FFF;}
 .primary{ background: #193c50; color: #FFF; }
-.secondary{ background: #047a6f; color: #FFF; }
+.secondary{ background: #388697; color: #FFF; }
 .alert{ background: #de1738; color: #fff; }
 .success{ background: #008000; color: #FFF; }
 .fullscreen{
@@ -183,7 +183,7 @@ button{
 }
 button.primary:focus{
     border: 2px dashed #193c50 ;
-    background: #26a69a ;
+    background: #388697;
     color: #000 ;
 }
 button.secondary:focus{
