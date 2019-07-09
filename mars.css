@@ -1,14 +1,22 @@
+@supports (backdrop-filter: blur(10px) saturate(125%)) or (-webkit-backdrop-filter: blur(10px) saturate(125%)) {
+    .overlay,.modalcontainer,.topnav{
+        -webkit-backdrop-filter: blur(10px) saturate(125%);
+        backdrop-filter: blur(10px) saturate(125%);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
 *{
     box-sizing: border-box;
     transition: 300ms;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Product Sans', Arial, Helvetica, sans-serif;
+    outline: none;
 }
 
 body{ background: #fdfde8; }
 
 .inverted{background: #000; color: #FFF;}
 .primary{ background: #193c50; color: #FFF; }
-.secondary{ background: #388697; color: #FFF; }
+.secondary{ background: #19c19c; color: #FFF; }
 .alert{ background: #de1738; color: #fff; }
 .success{ background: #008000; color: #FFF; }
 .fullscreen{
@@ -76,11 +84,13 @@ input[type=text],input[type=number],input[type=password]{
     width: 80%;
     font-size: 20px;
     background: transparent;
+    appearance: none;
+    outline: none;
 }
 
 input[type=text]:focus,input[type=number]:focus,input[type=password]:focus{
     background: transparent;
-    border-bottom: 2px solid #ffe100;
+    border-bottom: 2px solid #19c19c;
 }
 
 select{
@@ -90,6 +100,8 @@ select{
     border-bottom: 2px solid #193c50;
     font-size: 16px;
     background: transparent;
+    -webkit-appearance: none;
+    outline: none;
 }
 select.date{ width: 60px; }
 select.month{ width: 80px; }
@@ -122,9 +134,9 @@ select.year{ width: 65px; }
 
 .check input:checked ~ .checkmark{
     background: #193c50;
-    color: #ffe100;
+    color: #19c19c;
     font-weight: bold;
-    border: 2px solid #ffe100;
+    border: 2px solid #19c19c;
 }
 
 .radiomark{
@@ -140,9 +152,9 @@ select.year{ width: 65px; }
 
 .check input:checked ~ .radiomark{
     background: #193c50;
-    color: #ffe100;
+    color: #19c19c;
     font-weight: bold;
-    border: 2px solid #ffe100;
+    border: 2px solid #19c19c;
 }
 
 .switch{
@@ -162,7 +174,7 @@ select.year{ width: 65px; }
 
 .toggle{
     position: absolute;
-    background: #ffe100;
+    background: #19c19c;
     z-index: 0;
     display: inline-block;
     width: 20px;
@@ -182,14 +194,12 @@ button{
     display: block;
 }
 button.primary:focus{
-    border: 2px dashed #193c50 ;
-    background: #388697;
+    background: #19c19c;
     color: #000 ;
 }
 button.secondary:focus{
-    border: 2px dashed #000 ;
     color: #000 ;
-    background: #ffe100 ;
+    background: #19c19c ;
 }
 button.alert:hover{
   border: 2px solid red;
@@ -213,15 +223,22 @@ button.success:hover{
     height: 50px;
     font-size: 24px;
 }
-.tab:hover{
-    border: 2px dashed #ffe100;
+
+/*
+Don't Use If Using Frost Buttons
+.tab:hover,.dropdown:hover{
+    border: 2px dashed #19c19c;
+    transition: all 200ms ease;
 }
+*/
+
+
 .tab.active{
-    background: #ffe100;
+    background: #19c19c;
     color: #000;
 }
 button.primary.tab:focus{
-    background: #ffe100;
+    background: #19c19c;
     color: #000;
 }
 .floattab{
@@ -359,7 +376,7 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
   right: 0;
   top:0;
   bottom: 0;
-  background: #000;
+  background: rgba(0, 0, 0, 0.7);
   color: #FFF;
   width: inherit;
   height: inherit;
@@ -372,7 +389,8 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
     top: 0;
     left: 0;
     z-index: 10;
-    background: #000;
+    background: rgba(0, 0, 0, 0.7);
+    
     color: #FFF;
     display: none;
 }
@@ -382,7 +400,7 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
   right: 0;
   top:0;
   bottom: 0;
-  background: #000;
+  background: rgba(0, 0, 0, 0);
   color: #FFF;
   width: 80%;
   height: 88%;
@@ -399,9 +417,6 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
     height: 50px;
     font-size: 24px;
 }
-.dropdown:hover{
-    border:dashed 2px;
-}
 .dropdown_container{
     position: relative;
     display: inline-block;
@@ -409,8 +424,7 @@ a,a:visited,a:active{color:initial; text-decoration:none;}
 .dropdown_content{
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    color: #FFF; 
+    color: #FFF;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -431,3 +445,35 @@ th, td {
   width:auto;
 }
 tr:hover{background: #ABCABC}
+
+/*windows 10 buttons*/
+.frost_container {
+    position: relative;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+  }
+  .frost_container .frost {
+    position: relative;
+    pointer-events: none;
+  }
+  .frost_container::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, #AFAFAF, transparent);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    transition: width .05s ease, height .05s ease;
+  }
+  .frost_container:hover::before {
+    --size: 180px;
+  }
+  

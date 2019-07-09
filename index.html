@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Product+sans" rel="stylesheet">
     <title>MARS</title>
     <link href="mars.css" rel="stylesheet" type="text/css">
     <script>
@@ -22,7 +22,7 @@
             document.getElementById("switch").innerHTML=("=");
         }
         function colormenu(){
-            document.getElementById("tm").style.background=("#193c50");
+            document.getElementById("tm").style.background=("rgba(0,0,0,0.6)");
             document.getElementById("tm").style.color=("#FFF");
         }
         function decolormenu(){
@@ -37,9 +37,9 @@
         }
     </script>
 </head>
-<body onload="hidesidenav()">
-    <div class="topnav inverted" id="tm">
-        <button class="primary tab menu left">MARS</button>
+<body onload="hidesidenav(); colormenu();">
+    <div class="topnav inverted" id="tm" onmouseover="colormenu();">
+        <button class="primary tab menu left" style="margin-left: 10px;">MARS</button>
         <div class="dropdown_container right">
             <button class="dropdown tab primary">Dropdown</button>
             <div class="dropdown_content">
@@ -146,19 +146,34 @@
     </div>
     <h1>Overlay and Modals</h1>
     <div class="overlaycontainer">
-      <img class="person polaroid"/>
+      <img class="person polaroid" src="4k-wallpaper-blur-close-up-1629998.jpg"/>
       <div class="overlay">
         <h2 style="text-align:center;">This Is An Overlay</h2>
       </div>
     </div><br>
-    <button class="small primary" onclick="openmodal();">Click To Open Modal</button>
+    <button class="small primary frost_container" onmouseover="frosting();" onclick="openmodal();"><span class="frost">Click To Open Modal</span></button>
     <div class="modalcontainer" id="mod1">
       <div class="modal">
         <h1 style="text-align:center">MODAL<button class="alert right small" onclick="closemodal();">X</button>
       </h1>
       </div>
     </div>
+    <br><br><br><br>
+    <button class="frost_container inverted large" onmouseover="frosting();">
+        <span class="frost">This One</span>
+    </button>
+    <script>
+            function frosting(){
 
+            document.querySelector(".frost_container:hover").onmousemove = e => {
+                const x = e.pageX - e.target.offsetLeft;
+                const y = e.pageY - e.target.offsetTop;
+            
+                e.target.style.setProperty("--x", `${x}px`);
+                e.target.style.setProperty("--y", `${y}px`);
+            };
+            }
+    </script>
 
 </body>
 </html>
